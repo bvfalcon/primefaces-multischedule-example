@@ -1,7 +1,7 @@
 # primefaces-multischedule-example
 Example of usage [Primefaces-Multischedule](https://github.com/bvfalcon/primefaces-multischedule) ccomponent.
 
-Requires Java 11 to compile and run
+Requires Java 11 to compile and run, Maven to build
 
 To run:
 
