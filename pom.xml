@@ -60,6 +60,7 @@
 	</dependencies>
 
 	<build>
+		<defaultGoal>package</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -103,6 +104,37 @@
 								</artifactItem>
 							</artifactItems>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-jar-maven-plugin</artifactId>
+				<configuration>
+					<outputFileName>${project.build.finalName}.jar</outputFileName>
+					<feature-packs>
+						<feature-pack>
+							<location>wildfly@maven(org.jboss.universe:community-universe)#26.1.1.Final</location>
+						</feature-pack>
+						<feature-pack>
+							<groupId>org.wildfly</groupId>
+							<artifactId>wildfly-datasources-galleon-pack</artifactId>
+							<version>2.2.0.Final</version>
+						</feature-pack>
+					</feature-packs>
+					<layers>
+						<layer>logging</layer>
+						<layer>jsf</layer>
+					</layers>
+					<excluded-layers>
+						<layer>deployment-scanner</layer>
+					</excluded-layers>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>package</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
