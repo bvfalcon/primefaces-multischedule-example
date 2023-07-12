@@ -16,4 +16,8 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+	<context-param>
+		<param-name>primefaces.SCHEDULE_LICENSE_KEY</param-name>
+		<param-value>CC-Attribution-NonCommercial-NoDerivatives</param-value>
+	</context-param>
 </web-app>
