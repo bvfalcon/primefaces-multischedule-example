@@ -17,7 +17,7 @@
 
 			<h:panelGrid columnClasses="value">
 				<bp:multiSchedule id="schedule" value="#{multiScheduleView.eventModel}"
-					widgetVar="myschedule">
+					widgetVar="myschedule" rightHeaderTemplate="resourceTimeGridDay,resourceTimeGridWeek">
 
 					<p:ajax event="dateSelect"
 						listener="#{multiScheduleView.onDateSelect}" update="eventDetails"
