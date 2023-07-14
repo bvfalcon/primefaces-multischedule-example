@@ -27,9 +27,9 @@
 			<classifier>jakarta</classifier>
 		</dependency>
 		<dependency>
-			<groupId>name.bychkov.primefaces</groupId>
-			<artifactId>multischedule</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>com.github.bvfalcon</groupId>
+			<artifactId>primefaces-multischedule</artifactId>
+			<version>master-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
@@ -88,4 +88,11 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>jitpack.io</id>
+			<url>https://jitpack.io</url>
+		</repository>
+	</repositories>
 </project>
